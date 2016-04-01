@@ -8,36 +8,33 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource  {
+class ViewController: UIViewController, UISearchBarDelegate {
 
-    @IBOutlet weak var collection: UICollectionView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collection.dataSource = self
-        collection.delegate = self
-    
-    }
+        searchBar.delegate = self
+        
+        // have a look what this does? Does it just mean keyboard disappears on return?
+        searchBar.returnKeyType = UIReturnKeyType.Done
 
-   
-    
-    
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return 1
+
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
-        // put in the number we will eventually have (total number of places in weather thing) (or first 30 coz really no ones scrolling)
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        let place = searchBar.text!.uppercaseString
+        performSegueWithIdentifier("PlaceVC", sender: place)
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        
-        return UICollectionViewCell()
-        
-        // gotta configure cells (+ dequefromresuable)
-        
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "PlaceVC"{
+            if let PlaceVC = segue.destinationViewController as? PlaceVC {
+                if let place = sender as? String {
+                    PlaceVC.place = place
+                }
+            }
+        }
     }
-    
 }
 

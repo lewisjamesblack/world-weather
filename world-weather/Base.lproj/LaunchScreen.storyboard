@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="master_of_break.ttf">
+            <string>MasterOfBreak</string>
+            <string>MasterOfBreak</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -15,13 +23,92 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whether you need it or not." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UoR-pS-WHa">
+                                <rect key="frame" x="182" y="204" width="236" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="AfN-jF-EzL"/>
+                                    <constraint firstAttribute="width" constant="236" id="zvu-py-Jai"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="LewisBlack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjN-Su-Fxg">
+                                <rect key="frame" x="235" y="340" width="157" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="157" id="adf-7e-ODu"/>
+                                    <constraint firstAttribute="height" constant="89" id="we0-O0-HRR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MasterOfBreak" family="Master Of Break" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="122" y="561" width="157" height="89"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Developer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adF-bX-HPA">
+                                <rect key="frame" x="311" y="381" width="89" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="89" id="0d6-sD-gSz"/>
+                                    <constraint firstAttribute="height" constant="24" id="6l9-Yx-coj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="206" y="618" width="89" height="24"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Weather of the World" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0QZ-27-b9q">
+                                <rect key="frame" x="40" y="73" width="520" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="I3i-pW-vZd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MasterOfBreak" family="Master Of Break" pointSize="50"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <fontDescription key="fontDescription" name="MasterOfBreak" family="Master Of Break" pointSize="45"/>
+                                    <rect key="frame" x="40" y="126" width="320" height="100"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="126" width="360" height="128"/>
+                                </variation>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bjN-Su-Fxg" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="6b9-mE-qWY"/>
+                            <constraint firstItem="bjN-Su-Fxg" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="120" id="7vE-ti-cY0"/>
+                            <constraint firstItem="0QZ-27-b9q" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Bm1-Xu-OyQ"/>
+                            <constraint firstItem="0QZ-27-b9q" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="106" id="RDE-B1-cCz"/>
+                            <constraint firstItem="adF-bX-HPA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="50" id="SeL-QR-WBU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0QZ-27-b9q" secondAttribute="trailing" constant="20" id="TaR-op-fmc"/>
+                            <constraint firstItem="UoR-pS-WHa" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="iJ8-pD-Saj"/>
+                            <constraint firstItem="0QZ-27-b9q" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="20" id="jJN-yi-iQL"/>
+                            <constraint firstItem="adF-bX-HPA" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="142" id="l1B-dm-VTn"/>
+                            <constraint firstItem="UoR-pS-WHa" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="184" id="seo-d7-yIQ">
+                                <variation key="heightClass=regular-widthClass=compact" constant="225"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7vE-ti-cY0"/>
+                                <exclude reference="l1B-dm-VTn"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="7vE-ti-cY0"/>
+                                <include reference="l1B-dm-VTn"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="375"/>
         </scene>
     </scenes>
 </document>
