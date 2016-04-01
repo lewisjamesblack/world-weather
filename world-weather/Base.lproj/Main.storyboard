@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="master_of_break.ttf">
+            <string>MasterOfBreak</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="world_weather" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +22,133 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ziy-l7-pfY">
+                                <rect key="frame" x="68" y="249" width="464" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PAF-At-Y8V">
+                                <rect key="frame" x="68" y="304" width="464" height="265"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7hh-gm-bKe">
+                                    <size key="itemSize" width="217" height="63"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Qln-uB-SiD">
+                                        <rect key="frame" x="0.0" y="0.0" width="217" height="63"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="217" height="63"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stratford upon Avon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fC-s1-uu5">
+                                                    <rect key="frame" x="0.0" y="8" width="217" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="yLE-pT-ENo"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18° today " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptf-ME-kwq">
+                                                    <rect key="frame" x="8" y="26" width="86" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="29" id="eDZ-pk-1zd"/>
+                                                        <constraint firstAttribute="width" constant="86" id="f69-P9-gFq"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18° tomorrow" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15j-wf-5XV">
+                                                    <rect key="frame" x="85" y="26" width="124" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="124" id="st2-8n-1JG"/>
+                                                        <constraint firstAttribute="height" constant="29" id="tlv-ON-AB0"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="4fC-s1-uu5" secondAttribute="trailing" constant="-8" id="0PO-XT-173"/>
+                                            <constraint firstItem="4fC-s1-uu5" firstAttribute="top" secondItem="Qln-uB-SiD" secondAttribute="topMargin" id="18m-JJ-tg7"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="15j-wf-5XV" secondAttribute="trailing" id="8Iy-7D-D38"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="ptf-ME-kwq" secondAttribute="bottom" id="Xle-UH-Iue"/>
+                                            <constraint firstItem="ptf-ME-kwq" firstAttribute="leading" secondItem="Qln-uB-SiD" secondAttribute="leadingMargin" id="bbl-aH-tg1"/>
+                                            <constraint firstItem="4fC-s1-uu5" firstAttribute="leading" secondItem="Qln-uB-SiD" secondAttribute="leadingMargin" constant="-8" id="jxQ-ZL-XdW"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="15j-wf-5XV" secondAttribute="bottom" id="nyS-UL-O5t"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Weather of the World" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G27-96-Lix">
+                                <rect key="frame" x="58" y="65" width="485" height="89"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="89" id="beE-JY-dwR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MasterOfBreak" family="Master Of Break" pointSize="50"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whether you need it or not." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGX-Rl-XCe">
+                                <rect key="frame" x="182" y="146" width="236" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="236" id="bji-ws-lUl"/>
+                                    <constraint firstAttribute="height" constant="21" id="nAS-iA-dEw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YGX-Rl-XCe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Xi-n8-hpJ"/>
+                            <constraint firstItem="YGX-Rl-XCe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="126" id="BOH-S0-KSE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="G27-96-Lix" secondAttribute="trailing" constant="36" id="Fx6-7w-lR3"/>
+                            <constraint firstItem="G27-96-Lix" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="45" id="kZ8-TK-WuW"/>
+                            <constraint firstItem="G27-96-Lix" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="36" id="pWG-dE-Oof"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="oSA-fh-DHu" id="7bz-u5-zld"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="oSA-fh-DHu">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="pqm-eb-YA9"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="Qjg-k8-2ZH"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="gMW-gH-1ja"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="VUk-BB-I1v"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
+            <point key="canvasLocation" x="280" y="337"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6MK-K8-dxE">
+            <objects>
+                <viewController id="gqT-5h-90S" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5YQ-Kw-2B0"/>
+                        <viewControllerLayoutGuide type="bottom" id="B3P-Da-j9r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hS7-cY-Xic">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YwL-HF-GaI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1096" y="337"/>
         </scene>
     </scenes>
 </document>
