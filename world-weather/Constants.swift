@@ -8,5 +8,9 @@
 
 import Foundation
 
-let URL_BASE = "http://api.openweathermap.org/data/2.5/forecast/city?id="
+let URL_BASE = "http://api.openweathermap.org/data/2.5/forecast/city?q="
+
 let URL_ID = "&APPID=6d6214b9a412e7f3ba24be9e9f73e21d"
+
+
+//http://api.openweathermap.org/data/2.5/forecast/city?q=WHITCHURCH&APPID=6d6214b9a412e7f3ba24be9e9f73e21d

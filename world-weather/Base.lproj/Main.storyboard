@@ -88,30 +88,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place??" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBi-Ex-jAX">
-                                <rect key="frame" x="213" y="254" width="174" height="92"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fA9-gD-o2H">
+                                <rect key="frame" x="534" y="20" width="46" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="92" id="UX2-sQ-Cvq"/>
-                                    <constraint firstAttribute="width" constant="174" id="yu5-te-07U"/>
+                                    <constraint firstAttribute="height" constant="30" id="JtG-Il-URv"/>
+                                    <constraint firstAttribute="width" constant="46" id="SNS-BF-LtC"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="xfJ-B9-a6V"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="kBi-Ex-jAX" firstAttribute="centerX" secondItem="hS7-cY-Xic" secondAttribute="centerX" id="D0t-6D-lFL"/>
-                            <constraint firstItem="kBi-Ex-jAX" firstAttribute="centerY" secondItem="hS7-cY-Xic" secondAttribute="centerY" id="rfw-X4-g3r"/>
+                            <constraint firstItem="fA9-gD-o2H" firstAttribute="trailing" secondItem="hS7-cY-Xic" secondAttribute="trailingMargin" id="4Aj-QZ-puK"/>
+                            <constraint firstItem="fA9-gD-o2H" firstAttribute="top" secondItem="5YQ-Kw-2B0" secondAttribute="bottom" id="ObA-XO-0f2"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="placeNameTxt" destination="kBi-Ex-jAX" id="EWg-j8-ubU"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YwL-HF-GaI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1100" y="403"/>
+            <point key="canvasLocation" x="1040" y="403"/>
         </scene>
     </scenes>
 </document>

@@ -10,8 +10,6 @@ import UIKit
 import Alamofire
 
 class PlaceVC: UIViewController {
-
-    @IBOutlet weak var placeNameTxt: UILabel!
     
     var place: String!
     
@@ -21,11 +19,7 @@ class PlaceVC: UIViewController {
         let location = Place(name: place)
         
         super.viewDidLoad()
-        
-        //placeNameTxt.text = "\(location.placeUrl)"
-        
-        print("\(location.placeUrl)")
-        
+                
         location.downloadWeatherDetails()
     }
 

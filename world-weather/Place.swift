@@ -32,7 +32,16 @@ class Place {
         // why do I have to do this below
         let url = NSURL(string: _placeUrl)!
         Alamofire.request(.GET, url).responseJSON { response in
-            print(response)
+//            if response == "" {
+//                print ("shit")
+//            } else {
+             print(response)
+          //  }
+            // add this bit in, if there's an error send it back to start page or something
+            //{
+            //"cod": "404",
+            //"message": "Error: Not found city"
+        //}
         }
     }
 }
