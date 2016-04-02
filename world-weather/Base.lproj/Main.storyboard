@@ -58,10 +58,11 @@
                             <constraint firstItem="G27-96-Lix" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="36" id="pWG-dE-Oof"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="sMB-LS-HrK"/>
                     <connections>
                         <outlet property="searchBar" destination="Ziy-l7-pfY" id="b9L-gO-fhk"/>
                         <outlet property="searchDisplayController" destination="oSA-fh-DHu" id="7bz-u5-zld"/>
-                        <segue destination="gqT-5h-90S" kind="show" identifier="PlaceVC" id="8kv-WX-bai"/>
+                        <segue destination="gqT-5h-90S" kind="show" identifier="PlaceVC" id="xva-Bp-Jif"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -74,7 +75,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="250" y="403"/>
+            <point key="canvasLocation" x="1062" y="403"/>
         </scene>
         <!--PlaceVC-->
         <scene sceneID="6MK-K8-dxE">
@@ -96,7 +97,7 @@
                                 </constraints>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="xfJ-B9-a6V"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="fGP-Be-67o"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -106,10 +107,11 @@
                             <constraint firstItem="fA9-gD-o2H" firstAttribute="top" secondItem="5YQ-Kw-2B0" secondAttribute="bottom" id="ObA-XO-0f2"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="3AI-wn-DsI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YwL-HF-GaI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1040" y="403"/>
+            <point key="canvasLocation" x="1772" y="403"/>
         </scene>
     </scenes>
 </document>
