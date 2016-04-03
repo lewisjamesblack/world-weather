@@ -33,7 +33,7 @@
                                     <constraint firstAttribute="height" constant="89" id="beE-JY-dwR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="MasterOfBreak" family="Master Of Break" pointSize="50"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whether you need it or not." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGX-Rl-XCe">
@@ -43,7 +43,7 @@
                                     <constraint firstAttribute="height" constant="21" id="nAS-iA-dEw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -62,7 +62,7 @@
                     <connections>
                         <outlet property="searchBar" destination="Ziy-l7-pfY" id="b9L-gO-fhk"/>
                         <outlet property="searchDisplayController" destination="oSA-fh-DHu" id="7bz-u5-zld"/>
-                        <segue destination="gqT-5h-90S" kind="show" identifier="PlaceVC" id="xva-Bp-Jif"/>
+                        <segue destination="LGF-iK-URt" kind="show" identifier="PageControllerSegue" id="SBr-tv-9Sz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -80,7 +80,7 @@
         <!--PlaceVC-->
         <scene sceneID="6MK-K8-dxE">
             <objects>
-                <viewController id="gqT-5h-90S" customClass="PlaceVC" customModule="world_weather" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlaceVC" id="gqT-5h-90S" customClass="PlaceVC" customModule="world_weather" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5YQ-Kw-2B0"/>
                         <viewControllerLayoutGuide type="bottom" id="B3P-Da-j9r"/>
@@ -100,18 +100,41 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="fGP-Be-67o"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PR3-nu-0oD">
+                                <rect key="frame" x="201" y="289" width="185" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="PfQ-8x-eCs"/>
+                                    <constraint firstAttribute="width" constant="185" id="TtL-aL-Pv3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fA9-gD-o2H" firstAttribute="trailing" secondItem="hS7-cY-Xic" secondAttribute="trailingMargin" id="4Aj-QZ-puK"/>
+                            <constraint firstItem="PR3-nu-0oD" firstAttribute="centerY" secondItem="hS7-cY-Xic" secondAttribute="centerY" id="HWD-pr-IKW"/>
                             <constraint firstItem="fA9-gD-o2H" firstAttribute="top" secondItem="5YQ-Kw-2B0" secondAttribute="bottom" id="ObA-XO-0f2"/>
+                            <constraint firstItem="PR3-nu-0oD" firstAttribute="centerX" secondItem="hS7-cY-Xic" secondAttribute="centerX" id="zNR-NR-mwn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3AI-wn-DsI"/>
+                    <connections>
+                        <outlet property="thingName" destination="PR3-nu-0oD" id="x95-oR-14a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YwL-HF-GaI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1772" y="403"/>
+            <point key="canvasLocation" x="1772" y="619"/>
+        </scene>
+        <!--PageVC-->
+        <scene sceneID="lHM-UW-kwj">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="LGF-iK-URt" customClass="PageVC" customModule="world_weather" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rYp-NC-Z6X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1772" y="-85"/>
         </scene>
     </scenes>
 </document>

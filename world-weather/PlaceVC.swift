@@ -11,17 +11,22 @@ import Alamofire
 
 class PlaceVC: UIViewController {
     
-    var place: String!
+    @IBOutlet weak var thingName: UILabel!
     
+    var dataObject: AnyObject?
     
     override func viewDidLoad() {
         
-        let location = Place(name: place)
-        
         super.viewDidLoad()
-                
-        location.downloadWeatherDetails()
+        
+        
+        thingName.text = "\(index)"
+        
+        
     }
+    
+    
+    
 
 
 

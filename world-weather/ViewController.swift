@@ -24,14 +24,14 @@ class ViewController: UIViewController, UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         let place = searchBar.text!.uppercaseString
-        performSegueWithIdentifier("PlaceVC", sender: place)
+        performSegueWithIdentifier(FIRST_SEGUE, sender: place)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "PlaceVC"{
-            if let PlaceVC = segue.destinationViewController as? PlaceVC {
+        if segue.identifier == FIRST_SEGUE{
+            if let PageVC = segue.destinationViewController as? PageVC {
                 if let place = sender as? String {
-                    PlaceVC.place = place
+                    PageVC.placeName = place
                 }
             }
         }

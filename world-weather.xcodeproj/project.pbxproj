@@ -17,6 +17,8 @@
 		756BD1861CAE54C900C53D83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 756BD1841CAE54C900C53D83 /* Main.storyboard */; };
 		756BD1881CAE54C900C53D83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 756BD1871CAE54C900C53D83 /* Assets.xcassets */; };
 		756BD18B1CAE54C900C53D83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 756BD1891CAE54C900C53D83 /* LaunchScreen.storyboard */; };
+		75B6638E1CAFCE6C0095A557 /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B6638D1CAFCE6C0095A557 /* PageVC.swift */; };
+		75B663901CAFDB280095A557 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B6638F1CAFDB280095A557 /* Global.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		756BD1871CAE54C900C53D83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		756BD18A1CAE54C900C53D83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		756BD18C1CAE54C900C53D83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75B6638D1CAFCE6C0095A557 /* PageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
+		75B6638F1CAFDB280095A557 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				7520287B1CAE644B00C2BEFB /* Place.swift */,
+				75B6638F1CAFDB280095A557 /* Global.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -70,6 +75,7 @@
 			children = (
 				756BD1821CAE54C900C53D83 /* ViewController.swift */,
 				752BD32E1CAE6FFD00CA83CB /* PlaceVC.swift */,
+				75B6638D1CAFCE6C0095A557 /* PageVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -266,8 +272,10 @@
 				756BD1831CAE54C900C53D83 /* ViewController.swift in Sources */,
 				756BD1811CAE54C900C53D83 /* AppDelegate.swift in Sources */,
 				752BD32F1CAE6FFD00CA83CB /* PlaceVC.swift in Sources */,
+				75B6638E1CAFCE6C0095A557 /* PageVC.swift in Sources */,
 				7520287C1CAE644B00C2BEFB /* Place.swift in Sources */,
 				752BD3321CAE713200CA83CB /* Constants.swift in Sources */,
+				75B663901CAFDB280095A557 /* Global.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
